@@ -17,6 +17,5 @@ $ bin/tcr_agent
 ```
 
 Available commands:
-- `example`: Run the example generator
-- `help`: Display the help message
+- `go [implementation path] [test path]`: Run the TCR loop given the implementation path and using the test path for running the tests
 
