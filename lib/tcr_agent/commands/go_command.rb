@@ -29,9 +29,6 @@ module TcrAgent
 
           puts "Commit Message: #{message}"
 
-          all_changes = TcrAgent::Actions::GetChangesAction.new.call
-          message = TcrAgent::Generators::CommitMessageGenerator.new(changes: all_changes).generate
-
           TcrAgent::Actions::GitCommitAction.new(commit_message: message).call
         else
           puts "Womp womp, tests failed. Reverting! (press 'f' to pay respects)"
